@@ -1,0 +1,99 @@
+<?php 
+$_conf = Mage::helper('googleshops');
+if($this->isEnabled()){ ?>
+<!-- BEGIN: Google Certified Shops -->
+<script type="text/javascript">
+	var gts = gts || [];
+	gts.push(["id", "<?php echo $_conf->getShopId(); ?>"]);
+	<?php
+	if($_conf->getBadgePosition() == 'BOTTOM_RIGHT') {
+		$position = 'BOTTOM_RIGHT';
+	 } else { 
+		$position = 'USER_DEFINED';
+		switch($_conf->getBadgePosition()) {
+			case "TOP_RIGHT":
+				$badge_container = 'gts_top_right';
+				break;
+			case "TOP_LEFT":
+				$badge_container = 'gts_top_left';
+				break;
+			case "BOTTOM_LEFT":
+				$badge_container = 'gts_bottom_left';
+				break;
+			default:
+				$position = 'BOTTOM_RIGHT';
+				break;
+		}
+	}	?>
+	gts.push(["badge_position", "<?php echo $position; ?>"]);
+	<?php if($position == 'USER_DEFINED') { ?>
+	gts.push(["badge_container", "<?php echo $badge_container; ?>"]);
+	<?php } ?>
+	gts.push(["locale", "<?php echo $_conf->getLocale(); ?>"]);
+	gts.push(["google_base_subaccount_id", "<?php echo $_conf->getGoogleShoppingAccountId(); ?>"]);
+	gts.push(["google_base_country", "<?php echo $_conf->getGoogleShoppingCountry(); ?>"]);
+	gts.push(["google_base_language", "<?php echo $_conf->getGoogleShoppingLanguage(); ?>"]);
+	
+	(function() {
+		var gts = document.createElement("script");
+		gts.type = "text/javascript";
+		gts.async = true;
+		gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(gts, s);
+	})();
+</script>
+<!-- END: Google Certified Shops -->
+<!-- START Google Certified Shops Order -->
+<?php 
+$_order = $this->getOrder(); 
+//$_customer = $this->getCustomer($_order);
+$_items = $this->getOrderItems($_order);
+
+//var_dump($_order->getData()); 
+//var_dump($_customer->getData()); ?>
+<div id="gts-order" style="display:none;" translate="no">
+
+  <!-- start order and merchant information -->
+  <span id="gts-o-id"><?php echo $_order->getIncrementId(); ?></span>
+  <span id="gts-o-domain"><?php echo $this->getFormattedBaseUrl(); ?></span>
+  <span id="gts-o-email"><?php echo $_order->getCustomerEmail(); ?></span>
+  <span id="gts-o-country"><?php echo $this->getOrderCountry($_order);?></span>
+  <span id="gts-o-currency"><?php echo $_order->getBaseCurrencyCode(); ?></span>
+  <span id="gts-o-total"><?php echo (float)$_order->getGrandTotal(); ?></span>
+  <span id="gts-o-discounts"><?php echo (float)$_order->getDiscountAmount(); ?></span>
+  <span id="gts-o-shipping-total"><?php echo (float)$_order->getShippingAmount(); ?></span>
+  <span id="gts-o-tax-total"><?php echo (float)$_order->getShippingTaxAmount() + (float)$_order->getTaxAmount(); ?></span>
+  <span id="gts-o-est-ship-date"><?php echo $this->getEstimatedShippingData($_order); ?></span>
+  <span id="gts-o-est-delivery-date"><?php echo $this->getEstimatedDeliveryData($_order); ?></span>
+  <span id="gts-o-has-preorder"><?php echo $this->orderHasPreorders($_items); ?></span>
+  <span id="gts-o-has-digital"><?php echo $this->isVirtual($_order); ?></span>
+  <!-- end order and merchant information -->
+
+  <!-- start repeated item specific information -->
+  <?php 
+  $i = 1;
+  foreach($_items as $_item) {
+	  //var_dump($_item->getData());
+	  ?>
+	  <!-- start item <?php echo $i; ?> -->
+	  <span class="gts-item">
+		<span class="gts-i-name"><?php echo $_item->getName(); ?></span>
+		<span class="gts-i-price"><?php echo (float)$_item->getOriginalPrice(); ?></span>
+		<span class="gts-i-quantity"><?php echo (float)$_item->getQtyOrdered(); ?></span>
+		<span class="gts-i-prodsearch-id"><?php echo $_item->getSku(); ?></span>
+		<span class="gts-i-prodsearch-store-id"><?php echo $_conf->getGoogleShoppingAccountId(); ?></span>
+		<span class="gts-i-prodsearch-country"><?php echo $_conf->getGoogleShoppingCountry(); ?></span>
+		<span class="gts-i-prodsearch-language"><?php echo $_conf->getGoogleShoppingLanguage(); ?></span>
+	  </span>
+	  <!-- end item <?php echo $i; ?> -->
+	  <?php
+	  $i++;
+  }
+  ?>
+  <!-- end repeated item specific information -->
+
+</div>
+<div id="<?php echo $badge_container; ?>"></div>
+<!-- END Google Certified Shops Order -->
+<?php } ?>

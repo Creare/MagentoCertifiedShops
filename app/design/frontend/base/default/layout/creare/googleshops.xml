@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+	<default>
+		<reference name="head">
+			<action method="addCss"><file>creare/css/googleshops.css</file></action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="googleshops/js" name="googleshops.standard" />
+		</reference>
+	</default>
+
+</layout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<sections>
+		<google>
+			<groups>
+				<certifiedshops>
+					<label>Google Certified Shops</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+							<active translate="label">
+								<label>Enable</label>
+								<frontend_type>select</frontend_type>
+								<source_model>adminhtml/system_config_source_yesno</source_model>
+								<sort_order>10</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</active>
+							<trusted_store_id translate="label">
+								<label>Trusted Store ID</label>
+								<frontend_type>text</frontend_type>
+								<sort_order>20</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+                       	</trusted_store_id>
+							<badge_position translate="label">
+								<label>Badge Position</label>
+								<frontend_type>select</frontend_type>
+								<sort_order>30</sort_order>
+								<source_model>googleshops/system_config_source_badgeposition</source_model>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</badge_position>
+							<locale translate="label">
+								<label>Shop Locale</label>
+								<frontend_type>select</frontend_type>
+								<source_model>adminhtml/system_config_source_locale</source_model>
+								<show_in_default>1</show_in_default>
+								<sort_order>40</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</locale>
+							<google_shopping_account_id translate="label">
+								<label>Google Shopping Account ID</label>
+								<frontend_type>text</frontend_type>
+								<sort_order>50</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</google_shopping_account_id>
+							<google_shopping_country translate="label">
+								<label>Google Shopping Country</label>
+								<frontend_type>select</frontend_type>
+								<source_model>adminhtml/system_config_source_country</source_model>
+								<sort_order>60</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</google_shopping_country>
+							<google_shopping_language translate="label">
+								<label>Google Shopping Language</label>
+								<frontend_type>select</frontend_type>
+								<source_model>googleshops/system_config_source_language</source_model>
+								<sort_order>70</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</google_shopping_language>
+							<estimated_shipping translate="label">
+								<label>Estimated Shipping Delay</label>
+								<frontend_type>select</frontend_type>
+								<source_model>googleshops/system_config_source_deliverytime</source_model>
+								<sort_order>80</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</estimated_shipping>
+							<estimated_delivery translate="label">
+								<label>Estimated Delivery Delay</label>
+								<frontend_type>select</frontend_type>
+								<source_model>googleshops/system_config_source_deliverytime</source_model>
+								<sort_order>90</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</estimated_delivery>
+					</fields>
+				</certifiedshops>
+			</groups>
+		</google>
+	</sections>
+</config>

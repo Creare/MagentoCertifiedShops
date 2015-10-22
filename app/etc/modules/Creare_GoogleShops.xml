@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Creare_GoogleShops>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Creare_GoogleShops>
+    </modules>
+</config>

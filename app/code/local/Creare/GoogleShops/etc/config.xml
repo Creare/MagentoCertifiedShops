@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Creare_GoogleShops>
+			<version>0.1.0</version>
+		</Creare_GoogleShops>
+	</modules>
+	<global>
+		<models>
+			<googleshops>
+				<class>Creare_GoogleShops_Model</class>
+			</googleshops>
+		</models>
+		<blocks>
+			<googleshops>
+				<class>Creare_GoogleShops_Block</class>
+			</googleshops>
+		</blocks>
+		<helpers>
+			<googleshops>
+				<class>Creare_GoogleShops_Helper</class>
+			</googleshops>
+		</helpers>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<googleshops>
+					<file>creare/googleshops.xml</file>
+				</googleshops>
+			</updates>
+		</layout>
+	</frontend>
+</config>
