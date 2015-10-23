@@ -1,6 +1,6 @@
 ## About Google Trusted Stores for Magento
 
-This is a free Magento extension that integrates the Google Trusted Stores JavaScript into your Magento store. When a store has passed the qualification period the badge code will display in the corner you have specified.
+This is a free Magento extension that integrates the Google Certified Shops (Trusted Stores in the US) JavaScript into your Magento store. When a store has passed the qualification period the badge code will display in the corner you have specified.
 
 ![Google Trusted Stores Badge](https://github.com/Creare/MagentoTrustedStores/blob/master/badge.png)
 
@@ -21,6 +21,6 @@ Once installed you can configure your GTS settings by going to **System > Creare
 
 You can then configure by adding your details and choosing your settings:
 
-![Google Trusted Stores Magento Admin](https://github.com/Creare/MagentoTrustedStores/blob/master/admin.png)
+![Google Trusted Stores Magento Admin](https://github.com/Creare/MagentoCertifiedShops/blob/master/admin.png)
 
 Once you have installed and configured the extension you must pass validation by following these instructions: https://support.google.com/trustedstoresmerchant/answer/6063088?hl=en&ref_topic=6063044
