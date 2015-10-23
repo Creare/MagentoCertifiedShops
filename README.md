@@ -1,4 +1,4 @@
-## About Google Trusted Stores for Magento
+## About Google Certified Shops (Trusted Stores in US) for Magento
 
 This is a free Magento extension that integrates the Google Certified Shops (Trusted Stores in the US) JavaScript into your Magento store. When a store has passed the qualification period the badge code will display in the corner you have specified.
 
