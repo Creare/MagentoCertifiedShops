@@ -17,7 +17,7 @@ Magento Community Edition 1.4.x to 1.9.x
 
 ### Usage
 
-Once installed you can configure your GTS settings by going to **System > Creare Group > Google Certified Shops**
+Once installed you can configure your GTS settings by going to **System > Configuration > SALES(left side menu) > Google API > Google Certified Shops**
 
 You can then configure by adding your details and choosing your settings:
 
