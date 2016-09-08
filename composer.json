@@ -1,0 +1,34 @@
+{
+    "name": "Creare/MagentoCertifiedShops",
+    "description":"Google Trusted Stores module for Magento",
+    "keywords": [
+        "magento",
+        "GTS",
+        "Google Trusted Stores"
+    ],
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "version": "0.1.0",
+    "require": {
+        "php": ">=5.3.0",
+        "magento-hackathon/magento-composer-installer":"*"
+    },
+    "extra": {
+         "map": [
+            ["app/code/local/Creare/GoogleShops/Block/Js.php", "app/code/local/Creare/GoogleShops/Block/Js.php"],
+            ["app/code/local/Creare/GoogleShops/etc/config.xml", "app/code/local/Creare/GoogleShops/etc/config.xml"],
+            ["app/code/local/Creare/GoogleShops/etc/system.xml", "app/code/local/Creare/GoogleShops/etc/system.xml"],
+            ["app/code/local/Creare/GoogleShops/Helper/Data.php", "app/code/local/Creare/GoogleShops/Helper/Data.php"],
+            ["app/code/local/Creare/GoogleShops/Model/System/Config/Source/Badgeposition.php", "app/code/local/Creare/GoogleShops/Model/System/Config/Source/Badgeposition.php"],
+            ["app/code/local/Creare/GoogleShops/Model/System/Config/Source/Deliverytime.php", "app/code/local/Creare/GoogleShops/Model/System/Config/Source/Deliverytime.php"],
+            ["app/code/local/Creare/GoogleShops/Model/System/Config/Source/Language.php", "app/code/local/Creare/GoogleShops/Model/System/Config/Source/Language.php"],
+            ["app/design/frontend/base/default/layout/creare/googleshops.xml", "app/design/frontend/base/default/layout/creare/googleshops.xml"],
+            ["app/design/frontend/base/default/template/creare/googleshops/product.phtml", "app/design/frontend/base/default/template/creare/googleshops/product.phtml"],
+            ["app/design/frontend/base/default/template/creare/googleshops/standard.phtml", "app/design/frontend/base/default/template/creare/googleshops/standard.phtml"],
+            ["app/design/frontend/base/default/template/creare/googleshops/success.phtml", "app/design/frontend/base/default/template/creare/googleshops/success.phtml"],
+            ["app/etc/modules/Creare_GoogleShops.xml", "app/etc/modules/Creare_GoogleShops.xml"],
+            ["skin/frontend/base/default/creare/css/googleshops.css", "skin/frontend/base/default/creare/css/googleshops.css"]
+         ],
+         "auto-append-gitignore": true
+    }
+}
